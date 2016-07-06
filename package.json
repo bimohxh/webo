@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node tool/watch.js",
-    "migrate": "knex migrate:latest"
+    "start": "node tool/watch.js"
   },
   "author": "",
   "license": "ISC",
@@ -21,9 +20,7 @@
     "babel-preset-stage-3": "^6.5.0",
     "babel-register": "^6.7.2",
     "babel-runtime": "^6.0.0",
-    "bookshelf": "^0.9.5",
     "jade": "^1.11.0",
-    "knex": "^0.11.5",
     "koa": "^2.0.0",
     "koa-bodyparser": "^2.2.0",
     "koa-convert": "^1.2.0",
@@ -35,7 +32,6 @@
     "koa-session": "^3.3.1",
     "koa-static": "^2.0.0",
     "koa-views": "^5.0.1",
-    "mysql": "^2.11.1",
     "node-sass": "^3.7.0",
     "underscore": "^1.8.3",
     "vue-hot-reload-api": "^1.3.2",

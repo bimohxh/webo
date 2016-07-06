@@ -14,8 +14,7 @@ const Koa = require('koa'),
       i18n = require('koa-i18n'),
       _ = require('underscore'),
       development = require('./lib/development'),
-      localEnv = require('./config/local_env'),
-      Table = require('./lib/table')
+      localEnv = require('./config/local_env')
 
 const app = new Koa()
 
@@ -59,14 +58,6 @@ let render = async (ctx, controller, action)=> {
   let para = await contr['get_' + action](ctx)
 
   let vi = controller + '/' + action + '.jade'
-
-  var mem = null
-  if (ctx.cookies.get('mem')) {
-    let mid = jwt.verify(ctx.cookies.get('mem'), localEnv.jwtkey).uid
-    mem = await Table.Mem.where({id: mid}).fetch()
-  };
-  
-
   
   await ctx.render(vi,
     _.extend({
@@ -76,8 +67,7 @@ let render = async (ctx, controller, action)=> {
         action: action
       },
       development: development,
-      localEnv: localEnv,
-      mem: mem
+      localEnv: localEnv
 
       //query: qs.parse(url.parse(ctx.request.url).query)
     }, para || {})

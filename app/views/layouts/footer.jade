@@ -1,14 +1,3 @@
-//- if localEnv.environment == 'development'
-//-   include ./devFooter
-
-//- script.
-//-   //$(document).on("turbolinks:load", function() {
-//-   console.log('#{route.controller}.#{route.action}')
-//-   if(typeof APP.#{route.controller}.#{route.action} == 'function'){
-//-     new APP.#{route.controller}.#{route.action}()
-//-   }
-//-   //})
-
 script.
   if(typeof APP.#{route.controller}.#{route.action} == 'function'){
     console.log('#{route.controller}.#{route.action}')
