@@ -1,0 +1,45 @@
+body{
+  font-family: Helvetica,Arial,"PingFang SC","Hiragino Sans GB","Source Han Sans CN",Roboto,"Heiti SC","Microsoft Yahei",sans-serif;
+  background-color: #F8F8F8 ;
+  font-size: .8rem
+}
+
+
+//- bootstrap patch
+.form-control{
+  border-radius: 0
+}
+
+.card {
+  border: none;
+  box-shadow: 1px 1px 1px #d4d4d4;
+  img {
+    width: 100%;
+  }
+}
+
+nav.navbar{
+  .avatar {
+    width: 30px; 
+    height: 30px;
+    border-radius: 100%;
+    box-shadow: 1px 1px 1px #DDD;
+  }
+}
+
+.container{
+  position: relative;
+}
+
+.turbolinks-progress-bar {
+  height: 5px;
+  background-color: #41464b;
+}
+
+// 消息提示
+.alert-tip{
+  position: fixed;  top: -100px;  width: 400px;  left: 50%;  margin-left: -200px;  z-index: 2000;     background-image: none;
+}
+
+
+[v-cloak]{display: none;}
