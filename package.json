@@ -41,6 +41,7 @@
     "webpack": "^1.12.14"
   },
   "devDependencies": {
-    "chokidar": "^1.5.2"
+    "chokidar": "^1.5.2",
+    "browser-sync": "^2.13.0"
   }
 }
