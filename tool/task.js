@@ -19,6 +19,7 @@ exports.build =  (cmd, tip)=> {
   console.log(('[' + tip + '] 开始 ...'))
   exec(cmd)
   console.log(('[' + tip + '] 完成，耗时 ' + timeDiff(prev) + ' 秒'))
+
   //console.log(('所有任务完成，耗时 ' + timeDiff(start) + ' 秒').magenta)
 }
 

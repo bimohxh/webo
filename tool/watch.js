@@ -2,7 +2,28 @@
 
 var chokidar = require('chokidar'),
     path = require('path'),
-    Task = require('./task')
+    Task = require('./task'),
+    exec = require('child_process').execSync,
+    nodemon = require('nodemon')
+
+const bs = require("browser-sync").create()
+
+bs.init(require('../bs-config'));
+
+/*nodemon({
+  script: 'app.js',
+  ext: 'js json'
+});*/
+/*
+nodemon.on('start', function () {
+  console.log('App has started');
+}).on('quit', function () {
+  bs.exit()
+  console.log('App has quit');
+}).on('restart', function (files) {
+  
+});*/
+
 
 const getCmd = (filepath)=> {
   switch(path.extname(filepath)){
@@ -23,6 +44,7 @@ chokidar.watch(['./app/assets/stylesheets/', './app/assets/javascripts/']).on('a
     let cs = getCmd(filepath)
     if(cs){
       Task.build(cs[0], cs[1])
+      //bs.reload()
     }
   }
   

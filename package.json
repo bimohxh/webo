@@ -42,6 +42,7 @@
   },
   "devDependencies": {
     "chokidar": "^1.5.2",
-    "browser-sync": "^2.13.0"
+    "browser-sync": "^2.13.0",
+    "nodemon": "^1.9.2"
   }
 }

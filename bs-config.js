@@ -14,7 +14,7 @@
  */
 module.exports = {
     "ui": {
-        "port": 3001,
+        "port": 2001,
         "weinre": {
             "port": 8080
         }
@@ -23,7 +23,7 @@ module.exports = {
     "watchOptions": {},
     "server": false,
     "proxy": 'localhost:2000',
-    "port": 3000,
+    "port": 2002,
     "middleware": false,
     "serveStatic": [],
     "ghostMode": {
