@@ -1,6 +1,7 @@
 'use strict';
 require("babel-polyfill");
 
+
 const Koa = require('koa'),
       views = require('koa-views'),
       router = require('koa-router')(),
@@ -12,12 +13,14 @@ const Koa = require('koa'),
       bodyParser = require('koa-bodyparser'),
       //i18n = require('koa-i18n'),
       _ = require('underscore'),
-      fs = require("fs")
-
-
+      fs = require("fs"),
+      webpack = require('webpack')
 
 
 const app = new Koa()
+
+
+
 
 
 app.use(bodyParser())
@@ -59,6 +62,9 @@ app
   .use(route(router))
   .use(router.routes())
   .use(router.allowedMethods());
+
+
+
 
 
 app.listen(2004)

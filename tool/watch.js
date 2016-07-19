@@ -11,15 +11,15 @@ const getCmd = (filepath)=> {
       var cmd = 'node-sass --output-style compressed ' + filepath + ' ./tmp/assets/stylesheets/' + path.basename(filepath, '.scss') + '.css'
       return [cmd, '编译Sass']
 
-    case '.js': 
+    /*case '.js': 
       var cmd = 'webpack --entry ./' + filepath + ' --output-filename ' + filepath.replace('app', 'tmp')
-      return [cmd, 'webpack 打包']
+      return [cmd, 'webpack 打包']*/
   }
   return null
 }
 
 
-chokidar.watch(['./app/assets/stylesheets/', './app/assets/javascripts/']).on('all', (event, filepath) => { 
+chokidar.watch(['./app/assets/stylesheets/']).on('all', (event, filepath) => { 
   if (path.basename(filepath).indexOf('.') > -1) {
     let cs = getCmd(filepath)
     if(cs){
