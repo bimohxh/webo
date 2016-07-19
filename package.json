@@ -1,11 +1,11 @@
 {
-  "name": "koa-demo",
+  "name": "webo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node tool/watch.js"
+    "start": "node app.js | node tool/watch.js | browser-sync start -c ./config/bs-config.js"
   },
   "author": "",
   "license": "ISC",
@@ -42,7 +42,6 @@
   },
   "devDependencies": {
     "chokidar": "^1.5.2",
-    "browser-sync": "^2.13.0",
-    "nodemon": "^1.9.2"
+    "browser-sync": "^2.13.0"
   }
 }

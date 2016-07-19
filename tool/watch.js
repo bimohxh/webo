@@ -3,27 +3,7 @@
 var chokidar = require('chokidar'),
     path = require('path'),
     Task = require('./task'),
-    exec = require('child_process').execSync,
-    nodemon = require('nodemon')
-
-const bs = require("browser-sync").create()
-
-bs.init(require('../bs-config'));
-
-/*nodemon({
-  script: 'app.js',
-  ext: 'js json'
-});*/
-/*
-nodemon.on('start', function () {
-  console.log('App has started');
-}).on('quit', function () {
-  bs.exit()
-  console.log('App has quit');
-}).on('restart', function (files) {
-  
-});*/
-
+    exec = require('child_process').execSync
 
 const getCmd = (filepath)=> {
   switch(path.extname(filepath)){

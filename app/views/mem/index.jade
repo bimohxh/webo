@@ -1,9 +1,0 @@
-extends ../layouts/layout.jade
-block con 
-  div.row
-    each item in resumes
-      div.col-md-3
-        a.card.card-resume(href="/resume/#{item.id}")
-          img.card-img-top(src="http://www.jianlipro.com/Public/temp_img/templateR1ch0.jpg")
-          div.card-block
-            strong 前端工程师

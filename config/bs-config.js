@@ -12,18 +12,21 @@
  |
  |
  */
+
+localConfig = require('../lib/local_config')
+
 module.exports = {
     "ui": {
-        "port": 2001,
+        "port": localConfig.hotLoad.ui,
         "weinre": {
             "port": 8080
         }
     },
-    "files": ["app/controllers", "app/views", "tmp/assets"],
+    "files": ["app/controllers", "app/views", "tmp/assets", "config", "lib"],
     "watchOptions": {},
     "server": false,
-    "proxy": 'localhost:2000',
-    "port": 2002,
+    "proxy": 'localhost:' + localConfig.port,
+    "port": localConfig.hotLoad.port,
     "middleware": false,
     "serveStatic": [],
     "ghostMode": {

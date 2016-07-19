@@ -19,7 +19,6 @@ const Koa = require('koa'),
 
 const app = new Koa()
 
-app.use(localConfig)
 
 app.use(bodyParser())
 
@@ -62,7 +61,7 @@ app
   .use(router.allowedMethods());
 
 
-app.listen(2000)
+app.listen(2004)
 console.log('server start...')
 
 
